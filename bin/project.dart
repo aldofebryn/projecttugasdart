@@ -23,14 +23,34 @@ void main(List<String> arguments) {
 
 //membuat daftar union dan intersection
  
-  Set<String> setA = {'A', 'B', 'C'};
-  Set<String> setB = {'B', 'C', 'D'};
+  // Set<String> setA = {'A', 'B', 'C'};
+  // Set<String> setB = {'B', 'C', 'D'};
 
-  Set<String> union = setA.union(setB);
-  Set<String> intersection = setA.intersection(setB);
+  // Set<String> union = setA.union(setB);
+  // Set<String> intersection = setA.intersection(setB);
 
-  print('Union: $union');
-  print('Intersection: $intersection');
+  // print('Union: $union');
+  // print('Intersection: $intersection');
+
+ 
+  // Buat Map untuk menyimpan data barang
+  Map<String, Map<String, dynamic>> daftarBarang = {};
+
+  // Tambahkan minimal 3 barang secara manual
+  daftarBarang['BRG001'] = {'nama': 'Laptop', 'harga': 15000000.0};
+  daftarBarang['BRG002'] = {'nama': 'Mouse', 'harga': 150000.0};
+  daftarBarang['BRG003'] = {'nama': 'Keyboard', 'harga': 500000.0};
+  daftarBarang['BRG004'] = {'nama': 'Monitor', 'harga': 3000000.0};
+
+  // Tampilkan seluruh data barang
+  print('Daftar Barang:');
+  daftarBarang.forEach((kode, data) {
+    print('$kode: ${data['nama']} - Rp ${data['harga'].toStringAsFixed(0)}');
+  });
+
+  // Tampilkan jumlah barang
+  print('\nJumlah barang: ${daftarBarang.length}');
+
 
 
 
